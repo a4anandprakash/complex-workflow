@@ -3,8 +3,8 @@ name: Complex
 on: push
 
 jobs:
-  ubantu:
-    runs-on: ubantu-latest
+  ubuntu:
+    runs-on: ubuntu-latest
     steps:
     - run: date
   windows:
@@ -16,7 +16,7 @@ jobs:
    steps:
    - run: date
   depends:
-  needs: [ubantu, windows, macos]
+   needs: [ubuntu, windows, macos]
    runs-on: macos-latest
    steps:
    - run: date
